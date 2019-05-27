@@ -3,7 +3,7 @@
 ## 1. Rodando a API
 
 - Instalar [Docker](https://download.docker.com/) e [Docker Compose](https://docs.docker.com/compose/install/)
-- Abrir terminal, e entrar na pasta /api 
+- Abrir terminal, e entrar na pasta `/api`
 - Rodar `docker-compose up -d`
 - A api estará disponível em `localhost:8000` 
 
