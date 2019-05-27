@@ -9,7 +9,7 @@
 
 ## 2. Rodando o App 
 
-- Entrar na pasta /webapp
+- Entrar na pasta `/webapp`
 - Instalar [nvm](https://github.com/nvm-sh/nvm#installation-and-update) 
 - `nvm install 11.10.0 && nvm use 11.10.0`
 - `npm install`
