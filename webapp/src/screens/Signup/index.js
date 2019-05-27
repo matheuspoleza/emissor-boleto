@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import styled from "styled-components";
 import axios from "axios";
+import StyledLink from "components/StyledLink";
 
 const Wrapper = styled.div`
   display: flex;
@@ -73,7 +74,9 @@ const Signup = ({ history }) => {
           Criar conta
         </Button>
 
-        <Link to="/">Voltar</Link>
+        <StyledLink>
+          <Link to="/">Voltar</Link>
+        </StyledLink>
       </Form>
     </Wrapper>
   );

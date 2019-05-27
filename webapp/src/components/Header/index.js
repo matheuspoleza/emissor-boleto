@@ -39,7 +39,7 @@ const Header = ({ history }) => {
   return (
     <StyledHeader>
       <Logo onClick={handleLogoClick}>Emissor de Boletos</Logo>
-      {isLoggedIn && <LogoutLink onClick={handleLogout}>Logout</LogoutLink>}
+      {isLoggedIn && <LogoutLink onClick={handleLogout}>Sair</LogoutLink>}
     </StyledHeader>
   );
 };

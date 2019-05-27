@@ -5,6 +5,7 @@ import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import styled from "styled-components";
 import axios from "axios";
+import StyledLink from "components/StyledLink";
 
 const Wrapper = styled.div`
   display: flex;
@@ -76,8 +77,12 @@ const Login = ({ history }) => {
             Entrar
           </Button>
 
-          <Link to="/criar-conta">Criar uma conta</Link>
-          <Link to="/esqueci-minha-senha">Esqueci minha senha</Link>
+          <StyledLink>
+            <Link to="/criar-conta">Criar uma conta</Link>
+          </StyledLink>
+          <StyledLink>
+            <Link to="/esqueci-minha-senha">Esqueci minha senha</Link>
+          </StyledLink>
         </SubmitForm>
       </Form>
     </Wrapper>

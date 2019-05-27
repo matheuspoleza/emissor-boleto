@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Container from "@material-ui/core/Container";
@@ -10,10 +11,14 @@ import Dashboard from "./screens/Dashboard";
 import CreateBillet from "./screens/CreateBillet";
 import ResetPassword from "./screens/ResetPassword";
 
+const Styles = styled.div`
+  font-family: "Roboto";
+`;
+
 const App = () => {
   return (
     <Router>
-      <div>
+      <Styles>
         <Header />
 
         <Container>
@@ -23,7 +28,7 @@ const App = () => {
           <Route path="/emitir-boleto" component={CreateBillet} />
           <Route path="/esqueci-minha-senha" component={ResetPassword} />
         </Container>
-      </div>
+      </Styles>
     </Router>
   );
 };
