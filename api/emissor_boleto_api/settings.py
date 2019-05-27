@@ -32,8 +32,6 @@ CORS_ORIGIN_ALLOW_ALL = True
 # Application definition
 
 REST_FRAMEWORK = {
-    # Use Django's standard `django.contrib.auth` permissions,
-    # or allow read-only access for unauthenticated users.
 }
 
 INSTALLED_APPS = [
@@ -43,8 +41,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
+    'corsheaders',
+    
     'rest_framework',
-    'corsheaders'
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
