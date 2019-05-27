@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -9,6 +10,10 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: 400px;
+  padding-top: 200px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Form = styled.form`
@@ -32,7 +37,7 @@ const Signup = ({ history }) => {
 
     try {
       const response = await axios.post("http://localhost:8000/users/", user);
-      history.push(`/login`);
+      history.push("/");
     } catch (error) {
       Object.keys(error.response.data).map(param => {
         alert(`${param}: ${error.response.data[param]}`);
@@ -67,6 +72,8 @@ const Signup = ({ history }) => {
         <Button variant="contained" color="primary" onClick={handleSubmit}>
           Criar conta
         </Button>
+
+        <Link to="/">Voltar</Link>
       </Form>
     </Wrapper>
   );

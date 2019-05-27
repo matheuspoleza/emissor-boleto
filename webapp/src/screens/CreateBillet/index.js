@@ -10,11 +10,19 @@ const Wrapper = styled.div`
   flex-direction: column;
   text-align: center;
   padding-top: 200px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+`;
+
+const SubmitForm = styled.div`
+  margin-top: 20px;
+  width: 100%;
 `;
 
 const CreateBillet = ({ history }) => {
@@ -79,9 +87,11 @@ const CreateBillet = ({ history }) => {
           onChange={handleChange("value")}
         />
 
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
-          Emitir
-        </Button>
+        <SubmitForm>
+          <Button variant="contained" color="primary" onClick={handleSubmit}>
+            Emitir
+          </Button>
+        </SubmitForm>
       </Form>
     </Wrapper>
   );

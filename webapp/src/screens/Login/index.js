@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
@@ -9,9 +10,20 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
+  padding-top: 200px;
+  width: 400px;
+  margin-right: auto;
+  margin-left: auto;
 `;
 
 const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+`;
+
+const SubmitForm = styled.div`
+  margin-top: 20px;
+  width: 100%;
   display: flex;
   flex-direction: column;
 `;
@@ -59,9 +71,14 @@ const Login = ({ history }) => {
           onChange={handleChange("password")}
         />
 
-        <Button variant="contained" color="primary" onClick={handleSubmit}>
-          Entrar
-        </Button>
+        <SubmitForm>
+          <Button variant="contained" color="primary" onClick={handleSubmit}>
+            Entrar
+          </Button>
+
+          <Link to="/criar-conta">Criar uma conta</Link>
+          <Link to="/esqueci-minha-senha">Esqueci minha senha</Link>
+        </SubmitForm>
       </Form>
     </Wrapper>
   );

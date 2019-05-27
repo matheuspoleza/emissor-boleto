@@ -26,6 +26,16 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = User
         fields = ('username', 'email', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
+
+    def create(self, validated_data):
+        user = User(
+            email=validated_data['email'],
+            username=validated_data['username']
+        )
+        user.set_password(validated_data['password'])
+        user.save()
+        return user
 
 # ViewSets define the view behavior.
 class UserViewSet(mixins.CreateModelMixin,
@@ -111,6 +121,6 @@ def generateBilletView(request):
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^', include(router.urls)),
-    path('login/', views.obtain_auth_token, name='api_token_auth'),
+    path('login/', views.obtain_auth_token, name='login'),
     path('billets/', generateBilletView)
 ]
