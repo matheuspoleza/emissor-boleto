@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import Container from "@material-ui/core/Container";
 
 import Header from "./components/Header";
+import Signup from "./screens/Signup";
 import Login from "./screens/Login";
 import Dashboard from "./screens/Dashboard";
 import CreateBillet from "./screens/CreateBillet";
@@ -16,6 +17,7 @@ const App = () => {
 
         <Container>
           <Route exact path="/" component={Login} />
+          <Route exact path="/criar-conta" component={Signup} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/emitir-boleto" component={CreateBillet} />
         </Container>
